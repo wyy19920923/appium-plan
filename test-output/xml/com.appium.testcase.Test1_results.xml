@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.017">
+           time="0.022">
   <properties />
   
   
-            <testcase name="searchTest" time="0.017" classname="com.appium.testcase.Test1" />
+            <testcase name="searchTest" time="0.022" classname="com.appium.testcase.Test1" />
       
 </testsuite>
