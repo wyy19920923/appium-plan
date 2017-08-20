@@ -9,9 +9,6 @@ import org.testng.annotations.Test;
  * Created by wangyuying on 2017/8/20.
  */
 public class Test1 {
-
-    @BeforeSuite
-
     @Test
     public void searchTest(){
         int a=100;
