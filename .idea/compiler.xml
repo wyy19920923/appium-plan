@@ -25,5 +25,8 @@
         <module name="appium-plan" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="appium-plan" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
