@@ -16,7 +16,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.8</version>
-            <scope>test</scope>
+            <!--<scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -28,7 +28,7 @@
             <groupId>org.uncommons</groupId>
             <artifactId>reportng</artifactId>
             <version>1.1.4</version>
-            <scope>test</scope>
+            <!--<scope>test</scope>-->
             <exclusions>
                 <exclusion>
                     <groupId>org.testng</groupId>
@@ -41,7 +41,7 @@
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
             <version>3.0</version>
-            <scope>test</scope>
+            <!--<scope>test</scope>-->
         </dependency>
 
         <dependency>
