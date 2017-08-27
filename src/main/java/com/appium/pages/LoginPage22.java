@@ -1,9 +1,14 @@
 package com.appium.pages;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 /**
- * Created by louyu on 2017-08-24.
+ * Created by wangyuying on 2017/8/27.
  */
-public class LoginPage {
+public class LoginPage22 {
 
 
         // private WebDriver driver;
@@ -29,11 +34,11 @@ public class LoginPage {
         private WebElement loginButton;
 
 
-        public BaiduIndexPage(WebDriver driver,String url) {
-            // this.driver = driver;
-            driver.get(url);
-            PageFactory.initElements(driver, this);
-        }
+//        public BaiduIndexPage(WebDriver driver,String url) {
+//            // this.driver = driver;
+//            driver.get(url);
+//            PageFactory.initElements(driver, this);
+//        }
 
         public void searchFor(String text) {
             searchField.clear();
