@@ -6,7 +6,8 @@
     <test name="Appium tests">
         <classes>
             <!--class name="com.louyu.test.BaiduTest2" /-->
-            <class name="com.appium.testcase.Test1" />
+            <!--<class name="com.appium.testcase.Test1" />-->
+            <class name="com.appium.testcase.LoginTest" />
         </classes>
     </test>
 
