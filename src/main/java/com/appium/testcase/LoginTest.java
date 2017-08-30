@@ -3,6 +3,8 @@ package com.appium.testcase;
 import com.appium.pages.MainPage;
 import com.appium.pages.MyPage;
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -19,6 +21,7 @@ import java.net.URL;
  */
 public class LoginTest {
 
+    
     private static final String APK_HOME = "D:\\intellijworkspace\\appium-plan\\src\\main\\resources\\dazhongdianping.apk";
     public AndroidDriver driver;
 
@@ -53,6 +56,9 @@ public class LoginTest {
 
     @Test
     public void loginTest() throws Exception {
+
+        PropertyConfigurator.configure("D:\\IdeaProjects\\appium\\log4j.properties");
+        Logger logger = Logger.getLogger(LoginTest.class);
 
         MainPage main = new MainPage(driver);
         main.skipIcon();
