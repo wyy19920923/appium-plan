@@ -2,6 +2,7 @@ package com.appium.testcase;
 
 import com.appium.pages.MainPage;
 import com.appium.pages.MyPage;
+import com.appium.util.BaseUtils;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -24,7 +25,7 @@ import java.net.URL;
 public class LoginTest {
 
     
-    private static final String APK_HOME = "D:\\intellijworkspace\\appium-plan\\src\\main\\resources\\dazhongdianping.apk";
+    private static final String APK_HOME = "D:\\intellijworkspace\\appium-plan\\src\\main\\resources\\health.apk";
     public AndroidDriver driver;
 
     @BeforeTest
@@ -41,8 +42,8 @@ public class LoginTest {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "4.4.2");
         capabilities.setCapability("uuid", "127.0.0.1:62001");    //设备uuid
-        capabilities.setCapability("appPackage", "com.dianping.v1");
-        capabilities.setCapability("appActivity", "com.dianping.main.guide.SplashScreenActivity");
+        capabilities.setCapability("appPackage", "com.wonders.health.venus.open.user");
+        capabilities.setCapability("appActivity", "com.wonders.health.venus.open.user.module.launch.SplashActivity");
         capabilities.setCapability("unicodeKeyboard", "true");   //支持中文输入
         capabilities.setCapability("resetKeyboard", "true");   //支持中文输入，必须两条都输入
         capabilities.setCapability("noSign", "true");    //不重新签名app
@@ -62,16 +63,17 @@ public class LoginTest {
         PropertyConfigurator.configure("D:\\intellijworkspace\\appium-plan\\log4j.properties");
         Logger logger = Logger.getLogger(LoginTest.class);
 
+        Logger.getLogger("打开app进入首页");
         MainPage main = new MainPage(driver);
-        main.skipIcon();
         main.gotoMyPage();
 
         MyPage myPage =new MyPage(driver);
-        myPage.normalLogin("18801613856","WYY1992");
+        myPage.normalLogin("18302180373","wyy123456");
 
         //断言
+        main.gotoMyPage();
         Logger.getLogger("开始断言");
-        Assert.assertEquals("楼宇小前",driver.findElement(By.id("user_name")).getText());
+        Assert.assertEquals("测试373",driver.findElement(By.id("tv_name")).getText());
 
     }
 
