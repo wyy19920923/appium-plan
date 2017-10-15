@@ -18,77 +18,67 @@ public class MyPage extends BasePage   {
 	}
 
 
-	// 点击登录按钮
-	@FindBy(id = "login_tip")
+	// 点击头像进行登录操作
+	@FindBy(id = "civ_photo")
 	private WebElement clickLoginButton;
 
-	// 正常登录页标题
-	@FindBy(name = "账号密码登录")
-	private WebElement normalLoginTitleText;
+/*	// 动态码登录方式
+	@FindBy(name = "rd_login_by_code")
+	private WebElement codeloginButton;
 
-	// 跳转到正常登录页 & 正常登录都是这个id
-	@FindBy(id = "login")
-	private WebElement loginButton;
+	//密码登录方式
+	@FindBy(id = "rd_login_by_pwd")
+	private WebElement pwdloginButton;
 
-	// 正常登陆页用户名编辑框
-//	@FindBy(xpath = "//*[contains(@id, 'edit_text')][1]")
-//	private WebElement usernameEditText;
-	@FindBy(xpath = "//*[contains(@resource-id, 'id/usr')]//*[contains(@resource-id, 'id/edit_text')]")
+	//动态码登录&密码登录用户名
+	@FindBy(id = "edit_mobile")
 	private WebElement usernameEditText;
 
-	// 正常登陆页密码编辑框
-	@FindBy(xpath = "//*[contains(@resource-id, 'id/psw')]//*[contains(@resource-id, 'id/edit_text')]")
+	// 动态码登录-验证码
+	@FindBy(id = "edit_code")
+	private WebElement codeEditText;
+
+	// 密码登录-密码
+	@FindBy(id = "edit_pwd")
 	private WebElement passwordEditText;
-//	@FindBy(xpath = "//*[contains(@id, 'edit_text')][1]")
-//	private WebElement passwordEditText;
 
-	// 已经登录时的用户名
-	@FindBy(id = "user_name")
-	private WebElement usernameText;
+	// 登录按钮
+	@FindBy(id = "btn_login")
+	private WebElement loginButton;
+
+	// 已经登录时用户名的id
+	@FindBy(id = "tv_name")
+	private WebElement usernameid;*/
+
+	// 已经登录时用户名的id
+	@FindBy(id = "tv_name")
+	private WebElement usernameid;
+
+	// 登录完成以后的健康按钮
+	@FindBy(id = "tab_container_1")
+	private WebElement healthPageButton;
 
 
-	public void normalLogin( String username, String password) throws InterruptedException {
+	public void gotoLoginPage() throws InterruptedException {
 
 		// skip when already login
-		BaseUtils.saveScreenshot(driver, "用户名密码登录第一步");
-		if (BaseUtils.waitForElementVisibility(driverWait, usernameText)) {
-			System.out.println("用户已登录");
-			return;
+		BaseUtils.saveScreenshot(driver, "点击头像进行登录");
+		if (BaseUtils.waitForElementVisibility(driverWait, usernameid)) {
+			System.out.println("用户已登录，无需点击头像登录");
+			return ;
 		} else {
 			BaseUtils.waitForElement(driverWait, clickLoginButton).click();
 		}
-
-
-		// skip normal login page and go to fast login page
-		BaseUtils.saveScreenshot(driver, "用户名密码登录第二步");
-		if (BaseUtils.waitForElementVisibility(driverWait, normalLoginTitleText)) {
-			BaseUtils.waitForElement(driverWait, loginButton).click();
-		}
-
-		BaseUtils.saveScreenshot(driver, "用户名密码登录第三步");
-		BaseUtils.waitForElement(driverWait, usernameEditText).sendKeys(username);
-		BaseUtils.waitForElement(driverWait, passwordEditText).sendKeys(password);
-		BaseUtils.saveScreenshot(driver, "用户名密码登录第四步");
-
-		BaseUtils.saveScreenshot(driver, "用户名密码登录第五步");
-		if (BaseUtils.waitForElementVisibility(driverWait, normalLoginTitleText)) {
-			BaseUtils.waitForElement(driverWait, loginButton).click();
-		}
-
-		//手动输入验证码
-		Thread.sleep(8000);
-
-		BaseUtils.saveScreenshot(driver, "用户名密码登录第六步");
-		if (BaseUtils.waitForElementVisibility(driverWait, normalLoginTitleText)) {
-			BaseUtils.waitForElement(driverWait, loginButton).click();
-		}
 	}
 
 
-
-
-	public void checkLoginSuccess() {
-		Assert.assertTrue(BaseUtils.waitForElementVisibility(driverLongWait, usernameText));
-		BaseUtils.saveScreenshot(driver, "CheckLoginSuccess");
+	public void gotoHealthPage() {
+		BaseUtils.waitForElement(driverWait, healthPageButton).click();
 	}
+
+	public String getLoginUserName() throws InterruptedException {
+
+		return BaseUtils.waitForElement(driverWait, usernameid).getText();
+	}
+
 }

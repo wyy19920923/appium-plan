@@ -1,41 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Appium" >
-    <!--parameter name="username" value="john"/>
-    <parameter name="password" value="demo"/-->
-    <test name="Appium tests">
+    <!--preserve-order配置测试用例是否按照顺序执行-->
+    <test name="Appium tests"  preserve-order="true" >
+        <!--classes配置需要执行的测试脚本-->
         <classes>
-            <!--class name="com.louyu.test.BaiduTest2" /-->
-            <!--<class name="com.appium.testcase.Test1" />-->
-            <class name="com.appium.testcase.LoginTest" />
+            <class name="com.appium.testcase.login.LoginTest" />
+            <!--<class name="com.appium.testcase.login.LoginTest" />-->
         </classes>
     </test>
 
-    <!--test name="test1">
-        <parameter name="browser" value="ff"/>
-        <parameter name="nodeUrl" value="http://127.0.0.1:4444"/>
-        <parameter name="webSite" value="http://www.baidu.com
-
-"/> <classes>
-        <class name="com.louyu.test.BaiduTestGrid"></class> </classes>
-    </test>
-    <test name="test2">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="nodeUrl" value="http://127.0.0.1:5555"/>
-        <parameter name="webSite" value="http://www.baidu.com
-
-"/> <classes>
-        <class name="com.louyu.test.BaiduTestGrid"></class> </classes>
-    </test>
-    <test name="test3">
-        <parameter name="browser" value="ie"/>
-        <parameter name="nodeUrl" value="http://127.0.0.1:6666"/>
-        <parameter name="webSite" value="http://www.baidu.com
-
-"/> <classes>
-        <class name="com.louyu.test.BaiduTestGrid"></class> </classes>
-    </test-->
-
+    <!--配置ReportNg监听器-->
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>

@@ -55,4 +55,19 @@ public class MainPage extends BasePage {
         }
     }
 
+    public void gotoHealthPage() {
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (BaseUtils.waitForElementVisibility(driverWait, healthPageButton)){
+            BaseUtils.waitForElement(driverWait, healthPageButton).click();   //判断“健康”按钮是否存在，存在的话点击
+        }else{
+            BaseUtils.swipeToLeft(driver,4,3000);  //“健康”按钮不存在，则判断为在首次启动的引导页，进行页面左滑动
+            BaseUtils.waitForElement(driverWait, finishButton).click();  //完成引导页滑动
+            BaseUtils.waitForElement(driverWait, healthPageButton).click();   //点击“健康”按钮
+        }
+    }
+
 }
