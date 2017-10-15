@@ -5,7 +5,7 @@
     <test name="Appium tests"  preserve-order="true" >
         <!--classes配置需要执行的测试脚本-->
         <classes>
-            <class name="com.appium.testcase.login.LoginTest" />
+            <class name="com.appium.testcase.login.LoginTest2" />
             <!--<class name="com.appium.testcase.login.LoginTest" />-->
         </classes>
     </test>
