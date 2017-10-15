@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by wangyuying on 2017/8/27.
  */
+
 public class BasePage {
 	
 	public AndroidDriver driver;

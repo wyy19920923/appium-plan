@@ -1,5 +1,6 @@
 package com.appium.util;
 
+//import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.apache.commons.io.FileUtils;
@@ -10,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -21,14 +23,16 @@ import java.net.URI;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by wangyuying on 2016/4/28.
  */
 public class BaseUtils {
 
-	private BaseUtils() {}
-	
+	private BaseUtils() {
+	}
+
 	private static final Boolean debugMode = false; // false: save screenshot
 
 	//private static final SimpleDateFormat SHORT_SDF = new SimpleDateFormat("yyyyMMdd");
@@ -37,6 +41,42 @@ public class BaseUtils {
 	private static final String SAVE_SCREENSHOT_DIR_PREFIX = "screenshot";
 	private static final String SAVE_SCREENSHOT_DIR_SUFFIX = LONG_SDF.format(new Date());
 
+
+	public static WebElement waitForElement(WebDriverWait driver, By selector) {
+		return driver.until(ExpectedConditions.presenceOfElementLocated(selector));
+	}
+
+	public static WebElement waitForElement(WebDriverWait driver, WebElement element) {
+		return driver.until(ExpectedConditions.visibilityOf(element));
+	}
+
+
+	public static Boolean waitForElementVisibility(WebDriverWait driver, By locator) {
+		try {
+			driver.until(ExpectedConditions.visibilityOfElementLocated(locator));
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public static Boolean waitForElementVisibility(WebDriverWait driver, WebElement element) {
+		try {
+			driver.until(ExpectedConditions.visibilityOf(element));
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public static Boolean waitForTextToBePresentInElement(WebDriverWait driver, WebElement element, String text) {
+		try {
+			driver.until(ExpectedConditions.textToBePresentInElement(element, text));
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
 
 
 	private static String combinePaths(String... paths) {
@@ -51,7 +91,7 @@ public class BaseUtils {
 		try {
 			String saveScreenshotDir = combinePaths(CURRENT_DIR, SAVE_SCREENSHOT_DIR_PREFIX, SAVE_SCREENSHOT_DIR_SUFFIX);
 			File scrFile;
-			scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			String fileName = keyWord + ".jpg";
 			String filePath = combinePaths(saveScreenshotDir, fileName);
 			System.out.println("Begin save screenshot");
@@ -63,77 +103,65 @@ public class BaseUtils {
 		}
 	}
 
-//	public static void clickPoint(AndroidDriver driver, double xOffset, double yOffset, int duration) {
-//		int screenX = driver.manage().window().getSize().getWidth();
-//		int screenY = driver.manage().window().getSize().getHeight();
-//		int touchX = (int)(screenX * xOffset);
-//		int touchY = (int)(screenY * yOffset);
-//		System.out.println("Click (" + touchX + ", " + touchY + ")");
-//		driver.tap(1, touchX, touchY, duration);
-//	}
-//
+
 	public static void swipeToLeft(AndroidDriver driver, int times, int duration) {
-		int widht  = driver.manage().window().getSize().getWidth();
-		int height  = driver.manage().window().getSize().getHeight();
-		int startX = widht*6/7;
-		int startY = height/2;
-		int endX = widht/7;
-		int endY = height/2;
+		int widht = driver.manage().window().getSize().getWidth();
+		int height = driver.manage().window().getSize().getHeight();
+		int startX = widht * 6 / 7;
+		int startY = height / 2;
+		int endX = widht / 7;
+		int endY = height / 2;
 		System.out.println("Swipe from (" + startX + ", " + startY + ") to (" + endX + ", " + endY + ") " + times + " times");
 		for (int i = 0; i < times; i++) {
 			driver.swipe(startX, startY, endX, endY, duration);
+//			driver.performTouchAction(new TouchAction(driver).press(startX, startY).waitAction(duration).moveTo(endX, endY).release());
+		}
+	}
+
+	public static void switchToWebview(AndroidDriver driver,String webview) {
+
+		Set<String> context = driver.getContextHandles();
+		for (String contextName : context) {
+			System.out.println(contextName);
+//			if (context.contains("WEBVIEW")) {
+			if (contextName.equals(webview)) {
+//			if (context.toString().toLowerCase().startsWith("webview")) {
+				driver.context(webview);
+				System.out.println("切换到webview模式成功");
+				return;
+			}
+			else{
+				System.out.println("切换到webview模式失败");
+			}
 		}
 	}
 
 
-//	private static String getStringFromInputStream(InputStream is) throws IOException {
-//		ByteArrayOutputStream os = new ByteArrayOutputStream();
-//		byte[] buf = new byte[4096];
-//		int len = -1;
-//		while ((len = is.read(buf)) != -1) {
-//			os.write(buf, 0, len);
-//		}
-//		String str = os.toString("UTF-8");
-//		is.close();
-//		os.close();
-//		return str;
-//	}
+	public static void switchToNative(AndroidDriver driver) {
 
-
-	public static WebElement waitForElement(WebDriverWait driver, By selector) {
-		return driver.until(ExpectedConditions.presenceOfElementLocated(selector));
-	}
-	
-	public static WebElement waitForElement(WebDriverWait driver, WebElement element) {
-		return driver.until(ExpectedConditions.visibilityOf(element));
+		Set<String> context = driver.getContextHandles();
+		for (String contextName : context) {
+			System.out.println(contextName);
+			if (context.contains("NATIVE_APP")) {
+				driver.context("NATIVE_APP");
+				System.out.println("切换到native模式");
+			}
+		}
 	}
 
+	public static boolean findToast(AndroidDriver driver, String toast) {
 
-	public static Boolean waitForElementVisibility(WebDriverWait driver, By locator) {
 		try {
-			driver.until(ExpectedConditions.visibilityOfElementLocated(locator));
-			return true;
+			final WebDriverWait wait = new WebDriverWait(driver, 3);
+			Assert.assertNotNull(wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[contains(@text,'" + toast + "')]"))));
+			System.out.println("找到了toast");
+			return  true;
 		} catch (Exception e) {
-			return false;
+			throw new AssertionError("找不到" + toast);
 		}
 	}
-	
-	public static Boolean waitForElementVisibility(WebDriverWait driver, WebElement element) {
-		try {
-			driver.until(ExpectedConditions.visibilityOf(element));
-			return true;
-		} catch (Exception e) {
-			return false;
-		}
-	}
-	
-	public static Boolean waitForTextToBePresentInElement(WebDriverWait driver, WebElement element, String text) {
-		try {
-			driver.until(ExpectedConditions.textToBePresentInElement(element, text));
-			return true;
-		} catch (Exception e) {
-			return false;
-		}
-	}
+
+
+
 	
 }
