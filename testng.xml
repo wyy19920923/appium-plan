@@ -1,43 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Appium" >
-    <!--parameter name="username" value="john"/>
-    <parameter name="password" value="demo"/-->
+
     <test name="Appium tests">
         <classes>
-            <!--class name="com.louyu.test.BaiduTest2" /-->
-            <!--<class name="com.appium.testcase.Test1" />-->
-            <class name="com.appium.testcase.LoginTest" />
+            <class name="com.appium.testcase.login.LoginTest" />
         </classes>
     </test>
-
-    <!--test name="test1">
-        <parameter name="browser" value="ff"/>
-        <parameter name="nodeUrl" value="http://127.0.0.1:4444"/>
-        <parameter name="webSite" value="http://www.baidu.com
-
-"/> <classes>
-        <class name="com.louyu.test.BaiduTestGrid"></class> </classes>
-    </test>
-    <test name="test2">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="nodeUrl" value="http://127.0.0.1:5555"/>
-        <parameter name="webSite" value="http://www.baidu.com
-
-"/> <classes>
-        <class name="com.louyu.test.BaiduTestGrid"></class> </classes>
-    </test>
-    <test name="test3">
-        <parameter name="browser" value="ie"/>
-        <parameter name="nodeUrl" value="http://127.0.0.1:6666"/>
-        <parameter name="webSite" value="http://www.baidu.com
-
-"/> <classes>
-        <class name="com.louyu.test.BaiduTestGrid"></class> </classes>
-    </test-->
 
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
+
 </suite>

@@ -18,48 +18,56 @@ public class MainPage extends BasePage {
         super(driver);
     }
 
+    // 引导结束页
+    @FindBy(id = "done")
+    private WebElement finishButton;
+
     // 搜索框
-    @FindBy(id = "start_search")
+    @FindBy(id = "tv_search")
     private WebElement searchButton;
 
     // 首页按钮
     @FindBy(name = "首页")
     private WebElement homePageButton;
 
-    // 就餐人数选择按钮
-    @FindBy(name = "发现")
-    private WebElement findPageButton;
+    // 健康按钮
+    @FindBy(id = "tab_container_1")
+    private WebElement healthPageButton;
 
-    // 我的主页按钮
-    @FindBy(name = "我的")
+
+    //我的主页按钮
+    @FindBy(id = "tab_container_3")
     private WebElement myPageButton;
 
-    // 关闭图片按钮（可能出现）
-    @FindBy(id = "oprate_cross_icon")
-    private WebElement crossIconButton;
 
-    public void skipIcon() {
-        //System.out.println("waiting the icon...");
-        if (BaseUtils.waitForElementVisibility(driverWait, crossIconButton)) {
-            //System.out.println("Find the icon and click");
-            crossIconButton.click();
+    public void gotoMyPage() {
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (BaseUtils.waitForElementVisibility(driverWait, myPageButton)){
+            BaseUtils.waitForElement(driverWait, myPageButton).click();   //判断“我的”按钮是否存在，存在的话点击
+        }else{
+            BaseUtils.swipeToLeft(driver,3,3000);  //“我的”按钮不存在，则判断为在首次启动的引导页，进行页面左滑动
+            BaseUtils.waitForElement(driverWait, finishButton).click();  //完成引导页滑动
+            BaseUtils.waitForElement(driverWait, myPageButton).click();   //点击“我的”按钮
         }
     }
 
-    public void gotoMyPage() {
-        BaseUtils.waitForElement(driverWait, myPageButton).click();
+    public void gotoHealthPage() {
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (BaseUtils.waitForElementVisibility(driverWait, healthPageButton)){
+            BaseUtils.waitForElement(driverWait, healthPageButton).click();   //判断“健康”按钮是否存在，存在的话点击
+        }else{
+            BaseUtils.swipeToLeft(driver,4,3000);  //“健康”按钮不存在，则判断为在首次启动的引导页，进行页面左滑动
+            BaseUtils.waitForElement(driverWait, finishButton).click();  //完成引导页滑动
+            BaseUtils.waitForElement(driverWait, healthPageButton).click();   //点击“健康”按钮
+        }
     }
 
-    public void checkLoaded() {
-        Assert.assertTrue(BaseUtils.waitForElement(
-                driverWait, searchButton).getText().equals("输入商户名、地点"));
-		/*Assert.assertTrue(BaseUtils.waitForElementPresent(
-			driverWait, homePageButton));
-		Assert.assertTrue(BaseUtils.waitForElementPresent(
-			driverWait, tuanPageButton));
-		Assert.assertTrue(BaseUtils.waitForElementPresent(
-			driverWait, findPageButton));
-		Assert.assertTrue(BaseUtils.waitForElementPresent(
-			driverWait, myPageButton));*/
-    }
 }
