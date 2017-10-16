@@ -6,14 +6,14 @@
            skipped="5"
            time="0.004">
   <properties />
-            <testcase name="setUp" time="0.000" classname="com.appium.testcase.login.LoginTest">
+            <testcase name="setUp" time="0.000" classname="com.appium.testcase.login.LoginTest2">
                 <failure type="org.openqa.selenium.WebDriverException"
                   message="org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-N1ERL1L&apos;, ip: &apos;10.1.240.61&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: driver.version: AndroidDriver"
               >
-<![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
+                    <![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused: connect
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'DESKTOP-N1ERL1L', ip: '10.1.240.61', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: driver.version: AndroidDriver
@@ -29,7 +29,7 @@ Driver info: driver.version: AndroidDriver
   io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
   io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
   io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:97)
-  com.appium.testcase.login.LoginTest.setUp(LoginTest.java:55)
+  com.appium.testcase.login.LoginTest2.setUp(LoginTest.java:55)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -86,7 +86,7 @@ Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4
   io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
   io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
   io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:97)
-  com.appium.testcase.login.LoginTest.setUp(LoginTest.java:55)
+ com.appium.testcase.login.LoginTest2t.setUp(LoginTest.java:55)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -152,7 +152,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
   io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
   io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
   io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:97)
-  com.appium.testcase.login.LoginTest.setUp(LoginTest.java:55)
+com.appium.testcase.login.LoginTest2st.setUp(LoginTest.java:55)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -182,23 +182,23 @@ Caused by: java.net.ConnectException: Connection refused: connect
   java.lang.reflect.Method.invoke(Method.java:498)
   com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
 ]]>
-      </failure>
+                </failure>
 
           </testcase>
   
-            <testcase name="tearDown" time="0.0" classname="com.appium.testcase.login.LoginTest">
+            <testcase name="tearDown" time="0.0" classname="com.appium.testcase.login.LoginTest2">
           <skipped />
     </testcase>
-            <testcase name="loginSuccess" time="0.0" classname="com.appium.testcase.login.LoginTest">
+            <testcase name="loginSuccess" time="0.0" classname="com.appium.testcase.login.LoginTest2">
           <skipped />
     </testcase>
-            <testcase name="loginWithErrorUserName" time="0.0" classname="com.appium.testcase.login.LoginTest">
+            <testcase name="loginWithErrorUserName" time="0.0" classname="com.appium.testcase.login.LoginTest2">
           <skipped />
     </testcase>
-            <testcase name="GotoLoginPage" time="0.0" classname="com.appium.testcase.login.LoginTest">
+            <testcase name="GotoLoginPage" time="0.0" classname="com.appium.testcase.login.LoginTest2">
           <skipped />
     </testcase>
-            <testcase name="loginWithErrorPassWord" time="0.0" classname="com.appium.testcase.login.LoginTest">
+            <testcase name="loginWithErrorPassWord" time="0.0" classname="com.appium.testcase.login.LoginTest2">
           <skipped />
     </testcase>
   

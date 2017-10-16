@@ -21,5 +21,6 @@ public class BasePage {
 		this.driverWait = new WebDriverWait(this.driver,3);
 		this.driverLongWait = new WebDriverWait(this.driver,10);
 		PageFactory.initElements(this.driver, this);
+
 	}
 }
