@@ -1,0 +1,86 @@
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:0 ] - [ DEBUG ]  CookieSpec selected: default
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:114 ] - [ DEBUG ]  Auth cache not set in the context
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:115 ] - [ DEBUG ]  Connection request: [route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:117 ] - [ DEBUG ]  Connection leased: [id: 0][route: {}->http://127.0.0.1:4723][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:119 ] - [ DEBUG ]  Stale connection check
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:122 ] - [ DEBUG ]  http-outgoing-0: set socket timeout to 10800000
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:122 ] - [ DEBUG ]  Executing request POST /wd/hub/session/69b935e2-60df-4aaf-bc41-7b835f3e432f/element HTTP/1.1
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:123 ] - [ DEBUG ]  Target auth state: UNCHALLENGED
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:123 ] - [ DEBUG ]  Proxy auth state: UNCHALLENGED
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:124 ] - [ DEBUG ]  http-outgoing-0 >> POST /wd/hub/session/69b935e2-60df-4aaf-bc41-7b835f3e432f/element HTTP/1.1
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:124 ] - [ DEBUG ]  http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:125 ] - [ DEBUG ]  http-outgoing-0 >> Content-Length: 33
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:125 ] - [ DEBUG ]  http-outgoing-0 >> Host: 127.0.0.1:4723
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:126 ] - [ DEBUG ]  http-outgoing-0 >> Connection: Keep-Alive
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:126 ] - [ DEBUG ]  http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_121)
+2017-08-31 00:06:20  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:127 ] - [ DEBUG ]  http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4019 ] - [ DEBUG ]  http-outgoing-0 << HTTP/1.1 500 Internal Server Error
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4020 ] - [ DEBUG ]  http-outgoing-0 << X-Powered-By: Express
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4020 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Origin: *
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4020 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Methods: GET,POST,PUT,OPTIONS,DELETE
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4020 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Headers: origin, content-type, accept
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4020 ] - [ DEBUG ]  http-outgoing-0 << Vary: X-HTTP-Method-Override
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4020 ] - [ DEBUG ]  http-outgoing-0 << Content-Type: application/json; charset=utf-8
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4020 ] - [ DEBUG ]  http-outgoing-0 << Content-Length: 195
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4021 ] - [ DEBUG ]  http-outgoing-0 << Date: Wed, 30 Aug 2017 16:06:24 GMT
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4021 ] - [ DEBUG ]  http-outgoing-0 << Connection: keep-alive
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4021 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4022 ] - [ DEBUG ]  Connection [id: 0][route: {}->http://127.0.0.1:4723] can be kept alive indefinitely
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4022 ] - [ DEBUG ]  Connection released: [id: 0][route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4207 ] - [ DEBUG ]  CookieSpec selected: default
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4212 ] - [ DEBUG ]  Auth cache not set in the context
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4214 ] - [ DEBUG ]  Connection request: [route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4215 ] - [ DEBUG ]  Connection leased: [id: 0][route: {}->http://127.0.0.1:4723][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4220 ] - [ DEBUG ]  Stale connection check
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4252 ] - [ DEBUG ]  http-outgoing-0: set socket timeout to 10800000
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4255 ] - [ DEBUG ]  Executing request POST /wd/hub/session/69b935e2-60df-4aaf-bc41-7b835f3e432f/element HTTP/1.1
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4257 ] - [ DEBUG ]  Target auth state: UNCHALLENGED
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4259 ] - [ DEBUG ]  Proxy auth state: UNCHALLENGED
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4262 ] - [ DEBUG ]  http-outgoing-0 >> POST /wd/hub/session/69b935e2-60df-4aaf-bc41-7b835f3e432f/element HTTP/1.1
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4263 ] - [ DEBUG ]  http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4263 ] - [ DEBUG ]  http-outgoing-0 >> Content-Length: 33
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4264 ] - [ DEBUG ]  http-outgoing-0 >> Host: 127.0.0.1:4723
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4267 ] - [ DEBUG ]  http-outgoing-0 >> Connection: Keep-Alive
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4268 ] - [ DEBUG ]  http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_121)
+2017-08-31 00:06:24  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:4270 ] - [ DEBUG ]  http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10715 ] - [ DEBUG ]  http-outgoing-0 << HTTP/1.1 500 Internal Server Error
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10716 ] - [ DEBUG ]  http-outgoing-0 << X-Powered-By: Express
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10716 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Origin: *
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10717 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Methods: GET,POST,PUT,OPTIONS,DELETE
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10717 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Headers: origin, content-type, accept
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10718 ] - [ DEBUG ]  http-outgoing-0 << Vary: X-HTTP-Method-Override
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10718 ] - [ DEBUG ]  http-outgoing-0 << Content-Type: application/json; charset=utf-8
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10719 ] - [ DEBUG ]  http-outgoing-0 << Content-Length: 195
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10719 ] - [ DEBUG ]  http-outgoing-0 << Date: Wed, 30 Aug 2017 16:06:31 GMT
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10720 ] - [ DEBUG ]  http-outgoing-0 << Connection: keep-alive
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10720 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10721 ] - [ DEBUG ]  Connection [id: 0][route: {}->http://127.0.0.1:4723] can be kept alive indefinitely
+2017-08-31 00:06:31  [ Forwarding findElement on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10722 ] - [ DEBUG ]  Connection released: [id: 0][route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10943 ] - [ DEBUG ]  CookieSpec selected: default
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10944 ] - [ DEBUG ]  Auth cache not set in the context
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10945 ] - [ DEBUG ]  Connection request: [route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10945 ] - [ DEBUG ]  Connection leased: [id: 0][route: {}->http://127.0.0.1:4723][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10946 ] - [ DEBUG ]  Stale connection check
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10947 ] - [ DEBUG ]  http-outgoing-0: set socket timeout to 10800000
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10947 ] - [ DEBUG ]  Executing request DELETE /wd/hub/session/69b935e2-60df-4aaf-bc41-7b835f3e432f HTTP/1.1
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10947 ] - [ DEBUG ]  Target auth state: UNCHALLENGED
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10948 ] - [ DEBUG ]  Proxy auth state: UNCHALLENGED
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10948 ] - [ DEBUG ]  http-outgoing-0 >> DELETE /wd/hub/session/69b935e2-60df-4aaf-bc41-7b835f3e432f HTTP/1.1
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10948 ] - [ DEBUG ]  http-outgoing-0 >> Host: 127.0.0.1:4723
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10948 ] - [ DEBUG ]  http-outgoing-0 >> Connection: Keep-Alive
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10949 ] - [ DEBUG ]  http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_121)
+2017-08-31 00:06:31  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:10949 ] - [ DEBUG ]  http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13829 ] - [ DEBUG ]  http-outgoing-0 << HTTP/1.1 200 OK
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13830 ] - [ DEBUG ]  http-outgoing-0 << X-Powered-By: Express
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13830 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Origin: *
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13831 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Methods: GET,POST,PUT,OPTIONS,DELETE
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13831 ] - [ DEBUG ]  http-outgoing-0 << Access-Control-Allow-Headers: origin, content-type, accept
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13832 ] - [ DEBUG ]  http-outgoing-0 << Content-Type: application/json; charset=utf-8
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13832 ] - [ DEBUG ]  http-outgoing-0 << Content-Length: 76
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13833 ] - [ DEBUG ]  http-outgoing-0 << Date: Wed, 30 Aug 2017 16:06:34 GMT
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13833 ] - [ DEBUG ]  http-outgoing-0 << Connection: keep-alive
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13833 ] - [ DEBUG ]  Connection can be kept alive indefinitely
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13834 ] - [ DEBUG ]  Connection [id: 0][route: {}->http://127.0.0.1:4723] can be kept alive indefinitely
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13835 ] - [ DEBUG ]  Connection released: [id: 0][route: {}->http://127.0.0.1:4723][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13837 ] - [ DEBUG ]  Closing connections idle longer than 0 SECONDS
+2017-08-31 00:06:34  [ Forwarding quit on session 69b935e2-60df-4aaf-bc41-7b835f3e432f to remote:13838 ] - [ DEBUG ]  http-outgoing-0: Close connection

@@ -1,16 +1,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Appium" >
-
-    <test name="Appium tests">
+    <!--preserve-order配置测试用例是否按照顺序执行-->
+    <test name="Appium tests"  preserve-order="true" >
+        <!--classes配置需要执行的测试脚本-->
         <classes>
-            <class name="com.appium.testcase.login.LoginTest" />
+            <class name="com.appium.testcase.login.LoginTest2" />
+            <!--<class name="com.appium.testcase.login.LoginTest" />-->
         </classes>
     </test>
 
+    <!--配置ReportNg监听器-->
     <listeners>
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
-
 </suite>
