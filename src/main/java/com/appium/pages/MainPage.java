@@ -49,7 +49,7 @@ public class MainPage extends BasePage {
         if (BaseUtils.waitForElementVisibility(driverWait, myPageButton)){
             BaseUtils.waitForElement(driverWait, myPageButton).click();   //判断“我的”按钮是否存在，存在的话点击
         }else{
-            BaseUtils.swipeToLeft(driver,3,3000);  //“我的”按钮不存在，则判断为在首次启动的引导页，进行页面左滑动
+            BaseUtils.swipeToLeft(driver,4,3000);  //“我的”按钮不存在，则判断为在首次启动的引导页，进行页面左滑动
             BaseUtils.waitForElement(driverWait, finishButton).click();  //完成引导页滑动
             BaseUtils.waitForElement(driverWait, myPageButton).click();   //点击“我的”按钮
         }
